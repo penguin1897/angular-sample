@@ -1,0 +1,30 @@
+.app-api-container {
+	width: 600px;
+	margin: auto;
+}
+
+p {
+	line-height: 0.7rem;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.describe {
+	text-align: left;
+}
+
+.button-container {
+	text-align: left;
+}
+
+.button-container button {
+	margin-right: 5px;
+}
+
+.response-container {
+	width: 80%;
+	text-align: left;
+}

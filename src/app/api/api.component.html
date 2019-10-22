@@ -1,0 +1,22 @@
+<div class="app-api-container">
+	<div class="describe">
+		<p>テストしたいメソッドのボタンを押してください。</p>
+		<p>正常応答であれば、ボタンの下にresponseのstatusとbodyが表示されます。</p>
+		<p>何も表示されなければエラーになっています。</p>
+		<p>その場合、コンソールでエラーログを確認してください。</p>
+	</div>
+	<div class="button-container">
+		<button type="button" (click)="clear();getRequest()">Get</button>
+		<button type="button" (click)="clear();putRequest()">Put</button>
+		<button type="button" (click)="clear();postRequest()">Post</button>
+		<button type="button" (click)="clear();deleteRequest()">Delete</button>
+		<button type="button" (click)="clear()">Clear</button>
+	</div>
+	<div *ngIf="response" class="response-container">
+		<p>status : {{statusCode}}</p>
+		<ul *ngIf="body">
+			<li>body : </li>
+			<li *ngFor="let item of body | keyvalue">{{item.key}} : {{item.value}}</li>
+		</ul>
+	</div>
+</div>
